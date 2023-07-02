@@ -54,3 +54,9 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """Return string representation of user"""
         return self.email
+    
+    
+class Destination(models.Model):
+    
+    name = models.CharField(max_length=10)
+    mobileno = models.IntegerField(max_length=10)
